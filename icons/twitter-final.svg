@@ -1,0 +1,62 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- UrClaw Twitter Icon - Clean speech bubble with "U" and eyes -->
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF7A5A"/>
+      <stop offset="100%" style="stop-color:#FFBC94"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="200" fill="url(#bg-grad)"/>
+  
+  <!-- Speech bubble -->
+  <g filter="url(#shadow)">
+    <rect x="70" y="85" width="260" height="195" rx="45" fill="#FFFFFF"/>
+    <!-- Speech tail -->
+    <path d="M 140 280 L 115 325 L 185 280 Z" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Bold "U" letterform - periodic table style -->
+  <path d="M 115 130 
+           L 115 215 
+           Q 115 265 200 265 
+           Q 285 265 285 215 
+           L 285 130 
+           L 245 130 
+           L 245 210 
+           Q 245 235 200 235 
+           Q 155 235 155 210 
+           L 155 130 
+           Z" 
+        fill="#FF6B35"/>
+  
+  <!-- Cute beady eyes inside the U -->
+  <circle cx="170" cy="165" r="12" fill="#FFFFFF"/>
+  <circle cx="230" cy="165" r="12" fill="#FFFFFF"/>
+  <circle cx="172" cy="167" r="6" fill="#2D2D2D"/>
+  <circle cx="232" cy="167" r="6" fill="#2D2D2D"/>
+  <!-- Eye shine -->
+  <circle cx="174" cy="164" r="2" fill="#FFFFFF"/>
+  <circle cx="234" cy="164" r="2" fill="#FFFFFF"/>
+  
+  <!-- Small "r" subscript -->
+  <text x="295" y="260" font-family="Arial, Helvetica, sans-serif" font-size="45" font-weight="700" fill="#FF6B35">r</text>
+  
+  <!-- Subtle sparkle top right -->
+  <g fill="#FFD700" opacity="0.8">
+    <polygon points="320,95 325,110 330,95 325,100"/>
+    <polygon points="325,90 320,100 325,115 330,100"/>
+  </g>
+</svg>

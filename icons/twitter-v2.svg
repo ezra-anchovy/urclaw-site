@@ -1,0 +1,55 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- V2: Stylized "ur" lowercase with friendly claw mascot -->
+  <defs>
+    <linearGradient id="bg-grad-v2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC4899;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="claw-grad-v2" cx="50%" cy="50%">
+      <stop offset="0%" style="stop-color:#FFB84D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C42;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="400" rx="80" fill="url(#bg-grad-v2)"/>
+  
+  <!-- Friendly claw character (top right accent) -->
+  <g transform="translate(310, 90)">
+    <!-- Main claw body -->
+    <ellipse cx="0" cy="0" rx="35" ry="40" fill="url(#claw-grad-v2)"/>
+    <!-- Pincer left -->
+    <path d="M -20 -15 Q -35 -25 -40 -20 Q -35 -15 -25 -10 Z" fill="#FF6B35"/>
+    <!-- Pincer right -->
+    <path d="M 20 -15 Q 35 -25 40 -20 Q 35 -15 25 -10 Z" fill="#FF6B35"/>
+    <!-- Happy eye -->
+    <circle cx="-8" cy="-5" r="4" fill="#FFFFFF"/>
+    <circle cx="8" cy="-5" r="4" fill="#FFFFFF"/>
+    <circle cx="-8" cy="-5" r="2" fill="#333"/>
+    <circle cx="8" cy="-5" r="2" fill="#333"/>
+    <!-- Smile -->
+    <path d="M -12 8 Q 0 15 12 8" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- "ur" text - bold, rounded, friendly -->
+  <g transform="translate(200, 240)">
+    <!-- u -->
+    <path d="M -100 -60 L -100 -10 Q -100 30 -60 30 Q -30 30 -30 0 L -30 -60 L 0 -60 L 0 0 Q 0 60 -60 60 Q -120 60 -120 0 L -120 -60 Z" 
+          fill="#FFFFFF"/>
+    
+    <!-- r with claw-style hook -->
+    <path d="M 20 -60 L 20 60 L 50 60 L 50 10 Q 50 -20 70 -30 Q 90 -40 110 -30 L 110 -65 Q 70 -75 50 -60 Q 40 -50 40 -40 L 40 -60 Z" 
+          fill="#FFFFFF"/>
+    
+    <!-- Claw scratch accent under 'r' -->
+    <path d="M 70 45 L 100 50 M 75 55 L 105 60 M 80 65 L 110 70" 
+          stroke="#FFD700" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  </g>
+  
+  <!-- Small claw prints bottom left -->
+  <g transform="translate(60, 340)" opacity="0.4">
+    <circle cx="0" cy="0" r="5" fill="#FFFFFF"/>
+    <circle cx="15" cy="-3" r="5" fill="#FFFFFF"/>
+    <circle cx="30" cy="0" r="5" fill="#FFFFFF"/>
+  </g>
+</svg>

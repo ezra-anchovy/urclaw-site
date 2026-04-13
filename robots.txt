@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://urclaw.com/sitemap.xml

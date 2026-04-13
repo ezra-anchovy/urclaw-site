@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates | UrClaw</title>
+    <meta name="description" content="Latest news and updates from UrClaw - your friendly AI assistant setup service.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #18181b;
+            --accent: #a855f7;
+            --accent-glow: rgba(168, 85, 247, 0.3);
+            --text: #3f3f46;
+            --text-light: #71717a;
+            --bg: #fafafa;
+            --border: #e4e4e7;
+            --success: #22c55e;
+            --gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f97316 100%);
+            --gradient-subtle: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: var(--bg);
+        }
+
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: var(--primary); }
+
+        .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(250, 250, 250, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 16px 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a:hover { color: var(--accent); }
+
+        .nav-cta {
+            background: var(--gradient);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600 !important;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 140px 0 60px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 50% 30%, var(--accent-glow) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--gradient-subtle);
+            border: 1px solid rgba(168, 85, 247, 0.2);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            color: var(--accent);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .gradient-text {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Updates Section */
+        .updates {
+            padding: 40px 0 80px;
+        }
+
+        .update-card {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+        }
+
+        .update-date {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .update-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .update-card p {
+            color: var(--text);
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+
+        .update-card ul {
+            margin: 12px 0 0 20px;
+        }
+
+        .update-card li {
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .update-tag {
+            display: inline-block;
+            background: var(--gradient-subtle);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 0;
+            background: var(--primary);
+            color: white;
+            text-align: center;
+        }
+
+        .cta h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .cta p {
+            opacity: 0.8;
+            font-size: 1.1rem;
+            margin-bottom: 28px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 8px 24px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px var(--accent-glow);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            background: var(--primary);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        footer a:hover { color: white; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 1.75rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container" style="max-width: 1000px;">
+            <a href="index.html" class="logo"><img src="icons/twitter-claws.svg" alt="UrClaw" style="height: 32px; width: auto; margin-right: 4px;"> UrClaw</a>
+            <ul class="nav-links">
+                <li><a href="index.html#what">What Is This?</a></li>
+                <li><a href="index.html#how">How It Works</a></li>
+                <li><a href="news.html">Updates</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#book" class="nav-cta">Book a Session</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px; vertical-align: middle; margin-right: 6px;">
+                    <defs>
+                        <linearGradient id="news-hero-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF7A5A"/>
+                            <stop offset="100%" style="stop-color:#FFBC94"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="200" fill="url(#news-hero-grad)"/>
+                    <path d="M 115 130 L 115 215 Q 115 265 200 265 Q 285 265 285 215 L 285 130 L 245 130 L 245 210 Q 245 235 200 235 Q 155 235 155 210 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 115 130 L 115 115 C 115 105, 125 100, 135 105 C 145 110, 148 118, 145 125 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 285 130 L 285 115 C 285 105, 275 100, 265 105 C 255 110, 252 118, 255 125 L 245 130 Z" fill="#FFFFFF"/>
+                </svg>
+                What's New
+            </div>
+            <h1>UrClaw <span class="gradient-text">Updates</span></h1>
+            <p>The latest news on how we're making AI assistants easier for everyone.</p>
+        </div>
+    </section>
+
+    <!-- Updates -->
+    <section class="updates">
+        <div class="container">
+            <div class="update-card">
+                <div class="update-date">February 8, 2026</div>
+                <span class="update-tag">🎉 Launch</span>
+                <h3>UrClaw is Live!</h3>
+                <p>We're officially open for business. After months of helping friends and family set up their AI assistants, we decided to offer the same service to everyone.</p>
+                <p>Our goal is simple: make AI accessible to regular people. No coding required, no confusing docs, no trial-and-error. Just a friendly expert on a video call who gets everything working for you.</p>
+            </div>
+
+            <div class="update-card">
+                <div class="update-date">February 2026</div>
+                <span class="update-tag">📚 Coming Soon</span>
+                <h3>Video Tutorials in the Works</h3>
+                <p>We're recording short, friendly tutorials to help you get the most out of your AI assistant after setup:</p>
+                <ul>
+                    <li>How to ask your AI for help (the right way)</li>
+                    <li>Setting up email summaries</li>
+                    <li>Calendar and reminder tips</li>
+                    <li>Troubleshooting common issues</li>
+                </ul>
+            </div>
+
+            <div class="update-card">
+                <div class="update-date">Coming Soon</div>
+                <span class="update-tag">🤝 Community</span>
+                <h3>UrClaw Community Discord</h3>
+                <p>A place for UrClaw customers to share tips, ask questions, and help each other out. Stay tuned!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Get Started? 
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 40px; height: 40px; vertical-align: middle; margin-left: 8px;">
+                    <defs>
+                        <linearGradient id="news-cta-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF7A5A"/>
+                            <stop offset="100%" style="stop-color:#FFBC94"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="200" fill="url(#news-cta-grad)"/>
+                    <path d="M 115 130 L 115 215 Q 115 265 200 265 Q 285 265 285 215 L 285 130 L 245 130 L 245 210 Q 245 235 200 235 Q 155 235 155 210 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 115 130 L 115 115 C 115 105, 125 100, 135 105 C 145 110, 148 118, 145 125 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 285 130 L 285 115 C 285 105, 275 100, 265 105 C 255 110, 252 118, 255 125 L 245 130 Z" fill="#FFFFFF"/>
+                    <circle cx="170" cy="165" r="12" fill="#FFF8F0"/>
+                    <circle cx="230" cy="165" r="12" fill="#FFF8F0"/>
+                    <circle cx="172" cy="167" r="6" fill="#2D2D2D"/>
+                    <circle cx="232" cy="167" r="6" fill="#2D2D2D"/>
+                </svg>
+            </h2>
+            <p>Book a session and join the friendly AI assistant revolution.</p>
+            <a href="index.html#book" class="btn btn-primary">Book Your Session →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" style="width: 24px; height: 24px;">
+                    <defs>
+                        <linearGradient id="news-footer-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF7A5A"/>
+                            <stop offset="100%" style="stop-color:#FFBC94"/>
+                        </linearGradient>
+                    </defs>
+                    <circle cx="200" cy="200" r="200" fill="url(#news-footer-grad)"/>
+                    <path d="M 115 130 L 115 215 Q 115 265 200 265 Q 285 265 285 215 L 285 130 L 245 130 L 245 210 Q 245 235 200 235 Q 155 235 155 210 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 115 130 L 115 115 C 115 105, 125 100, 135 105 C 145 110, 148 118, 145 125 L 155 130 Z" fill="#FFFFFF"/>
+                    <path d="M 285 130 L 285 115 C 285 105, 275 100, 265 105 C 255 110, 252 118, 255 125 L 245 130 Z" fill="#FFFFFF"/>
+                    <circle cx="170" cy="165" r="12" fill="#FFF8F0"/>
+                    <circle cx="230" cy="165" r="12" fill="#FFF8F0"/>
+                    <circle cx="172" cy="167" r="6" fill="#2D2D2D"/>
+                    <circle cx="232" cy="167" r="6" fill="#2D2D2D"/>
+                </svg>
+                <span>UrClaw · An OpenClaw project</span>
+            </p>
+            <p style="margin-top: 8px;"><a href="terms.html">Terms</a> · <a href="news.html">Updates</a> · <a href="mailto:info@urclaw.com">Contact</a> · <a href="index.html">Home</a></p>
+        </div>
+    </footer>
+</body>
+</html>
