@@ -9,8 +9,8 @@
     <rect x="120" y="76" width="28" height="126" fill="#A8503A"/>
     <rect x="181" y="116" width="28" height="168" fill="#A8503A"/>
     <path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#A8503A"/>
-    <polygon points="209,116 269,116 285,140 209,140" fill="#A8503A"/>
-    <polygon points="209,260 285,260 269,284 209,284" fill="#A8503A"/>
+    <polygon points="205,116 269,116 285,140 205,140" fill="#A8503A"/>
+    <polygon points="205,260 285,260 269,284 205,284" fill="#A8503A"/>
   </g>
   <text x="98" y="308" fill="#2F2621" font-family="Playfair Display, Georgia, serif" font-size="72" font-weight="600">NYC's OpenClaw Experts</text>
   <text x="98" y="374" fill="#695A52" font-family="Inter, Arial, sans-serif" font-size="30">AI assistant setup, managed care, and live implementation for New York teams.</text>

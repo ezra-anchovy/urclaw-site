@@ -3,506 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>What is OpenClaw? | UrClaw</title>
-    <meta name="description" content="OpenClaw is your own AI assistant that actually does things for you. We'll set it up for you in one live session.">
+    <title>What Is OpenClaw? | UrClaw</title>
+    <meta name="description" content="OpenClaw is a local AI assistant stack that can handle real workflows on your computer. UrClaw helps NYC clients get it set up live.">
+    <link rel="canonical" href="https://urclaw.com/what-is-openclaw.html">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://urclaw.com/what-is-openclaw.html">
+    <meta property="og:title" content="What Is OpenClaw?">
+    <meta property="og:description" content="A plain-English explanation of OpenClaw and what UrClaw actually sets up for customers.">
+    <meta property="og:image" content="https://urclaw.com/social-card.svg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="What Is OpenClaw?">
+    <meta property="twitter:description" content="A practical explanation of OpenClaw for non-technical buyers.">
+    <meta property="twitter:image" content="https://urclaw.com/social-card.svg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #18181b;
-            --accent: #a855f7;
-            --accent-glow: rgba(168, 85, 247, 0.3);
-            --text: #3f3f46;
-            --text-light: #71717a;
-            --bg: #fafafa;
-            --border: #e4e4e7;
-            --success: #22c55e;
-            --gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f97316 100%);
-            --gradient-subtle: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--text);
-            line-height: 1.7;
-            background: var(--bg);
-        }
-
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: var(--primary); }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(250, 250, 250, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 16px 0;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover { color: var(--accent); }
-
-        .nav-cta {
-            background: var(--gradient);
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 140px 0 80px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 30%, var(--accent-glow) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: var(--gradient-subtle);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-bottom: 24px;
-            color: var(--accent);
-        }
-
-        .hero h1 {
-            font-size: clamp(2.25rem, 5vw, 3.25rem);
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 20px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .gradient-text {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 32px;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            box-shadow: 0 8px 24px var(--accent-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px var(--accent-glow);
-        }
-
-        /* What Is This */
-        .what-is-this {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .what-content {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .what-content h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .what-content p {
-            font-size: 1.1rem;
-            color: var(--text);
-            margin-bottom: 16px;
-        }
-
-        .what-content .highlight {
-            background: var(--gradient-subtle);
-            padding: 24px;
-            border-radius: 16px;
-            margin-top: 28px;
-            text-align: left;
-        }
-
-        .what-content .highlight h3 {
-            font-size: 1.1rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .example-list {
-            list-style: none;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 12px;
-        }
-
-        .example-list li {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-        }
-
-        .example-list li::before {
-            content: "✓";
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* Content Sections */
-        .content-section {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .content-section:nth-child(odd) {
-            background: var(--bg);
-        }
-
-        .content-section h2 {
-            font-size: 1.75rem;
-            margin-bottom: 24px;
-        }
-
-        .content-section p {
-            font-size: 1.1rem;
-            color: var(--text);
-            margin-bottom: 16px;
-            line-height: 1.7;
-            max-width: 700px;
-        }
-
-        .content-section ul {
-            margin: 24px 0;
-            padding-left: 24px;
-            max-width: 700px;
-        }
-
-        .content-section li {
-            margin-bottom: 12px;
-            font-size: 1rem;
-        }
-
-        .highlight-box {
-            background: var(--gradient-subtle);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 16px;
-            padding: 28px;
-            margin: 28px 0;
-            max-width: 700px;
-        }
-
-        .highlight-box h3 {
-            font-size: 1.2rem;
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .examples-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin: 24px 0;
-        }
-
-        .example-card {
-            background: white;
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .content-section:nth-child(odd) .example-card {
-            background: white;
-        }
-
-        .example-icon { font-size: 2rem; margin-bottom: 12px; }
-        .example-card h4 { font-size: 1rem; margin-bottom: 6px; }
-        .example-card p { font-size: 0.9rem; color: var(--text-light); }
-
-        /* CTA */
-        .cta {
-            padding: 80px 0;
-            background: var(--primary);
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-
-        .cta p {
-            opacity: 0.8;
-            font-size: 1.1rem;
-            margin-bottom: 28px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            background: var(--primary);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-        }
-
-        footer a:hover { color: white; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 1.9rem; }
-            .examples-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo"><img src="icons/twitter-claws.svg" alt="UrClaw" style="height: 32px; width: auto; margin-right: 4px;"> UrClaw</a>
-            <ul class="nav-links">
-                <li><a href="index.html#what">What Is This?</a></li>
-                <li><a href="index.html#how">How It Works</a></li>
-                <li><a href="news.html">Updates</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="index.html#book" class="nav-cta">Book a Session</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="index.html" aria-label="UrClaw home">
+                    <span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="115 71 175 218" width="22" height="28" aria-hidden="true"><rect x="120" y="76" width="28" height="126" fill="#fff8f1"/><rect x="181" y="116" width="28" height="168" fill="#fff8f1"/><path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#fff8f1"/><polygon points="205,116 269,116 285,140 205,140" fill="#fff8f1"/><polygon points="205,260 285,260 269,284 205,284" fill="#fff8f1"/></svg></span>
+                    <span class="brand-copy">
+                        <strong>UrClaw</strong>
+                        <span>NYC AI Setup</span>
+                    </span>
+                </a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" aria-label="Primary" data-nav-menu data-open="false">
+                    <a href="index.html#capabilities">Capabilities</a>
+                    <a href="pricing-table.html">Pricing</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Free Consult</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-badge">🦞 Your Questions Answered</div>
-            <h1>What is <span class="gradient-text">OpenClaw?</span></h1>
-            <p>The simple explanation of how your AI assistant works and what it can do for you.</p>
-        </div>
-    </section>
+        <main>
+            <section class="page-hero">
+                <div class="container page-grid">
+                    <div>
+                        <div class="eyebrow">Plain-English Explainer</div>
+                        <h1>OpenClaw is an AI assistant stack that runs on your computer and does real work for you.</h1>
+                        <p style="margin-top: 1rem; color: var(--text-soft); max-width: 42rem;">UrClaw exists because many people like the promise of agentic software, but do not want to spend nights reading docs, debugging installs, and figuring out which workflow is real versus theatrical.</p>
+                    </div>
+                    <aside class="stat-stack">
+                        <div class="stat-card">
+                            <strong>What UrClaw does</strong>
+                            <p>We install, configure, and test OpenClaw live with you so the system is usable immediately.</p>
+                        </div>
+                        <div class="stat-card">
+                            <strong>What UrClaw does not do</strong>
+                            <p>We do not sell hosted dashboards with vague promises and fake social proof.</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
 
-    <!-- What Is OpenClaw -->
-    <section class="what-is-this">
-        <div class="container">
-            <div class="what-content">
-                <h2>The Simple Answer</h2>
-                <p><strong>OpenClaw is software that gives you your own AI assistant — one that actually <em>does</em> things, not just answers questions.</strong></p>
-                <p>Think of it like having a smart helper on your computer who can check your emails, manage your calendar, search the web, and automate repetitive tasks — all on its own.</p>
-                <p>The best part? It runs right on your computer. Your data stays yours.</p>
-                
-                <div class="highlight">
-                    <h3>🦞 What Your AI Can Do</h3>
-                    <ul class="example-list">
-                        <li>Summarize your emails</li>
-                        <li>Research topics for you</li>
-                        <li>Draft messages and docs</li>
-                        <li>Organize your files</li>
-                        <li>Check your calendar</li>
-                        <li>Automate repetitive tasks</li>
-                    </ul>
+            <section class="section">
+                <div class="container page-grid">
+                    <article class="card">
+                        <h2>What it can handle</h2>
+                        <p>Depending on your setup, OpenClaw can work through browser tasks, email, scheduling, research, reminders, file handling, and voice workflows. The right setup depends on your machine and the systems you already use.</p>
+                        <ul class="check-list">
+                            <li>Email triage and draft generation</li>
+                            <li>Calendar handling and appointment booking</li>
+                            <li>Document drafting and recurring admin tasks</li>
+                            <li>Web-based workflows that are repetitive or tedious</li>
+                        </ul>
+                    </article>
+                    <article class="card">
+                        <h2>Why people hire UrClaw</h2>
+                        <p>Because implementation is where most people stall. They do not need another explainer thread. They need someone to get the assistant running on a real machine, under real conditions, with a support path afterward.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="eyebrow">What The Session Looks Like</div>
+                        <h2>A realistic view of the process</h2>
+                    </div>
+
+                    <div class="steps-grid">
+                        <article class="step-card">
+                            <span class="step-number">1</span>
+                            <h3>Scope the workflow</h3>
+                            <p>We identify the specific task chain you want to reduce or automate before touching anything technical.</p>
+                        </article>
+                        <article class="step-card">
+                            <span class="step-number">2</span>
+                            <h3>Install and configure</h3>
+                            <p>We work on your machine, connect the relevant tools, and explain the pieces so the setup is not a black box.</p>
+                        </article>
+                        <article class="step-card">
+                            <span class="step-number">3</span>
+                            <h3>Test and hand off</h3>
+                            <p>We verify that the workflow actually runs, then we show you how to operate it and what support window applies.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container cta-panel">
+                    <div>
+                        <div class="eyebrow">Next Step</div>
+                        <h2>If the idea makes sense, the consult is where we confirm fit.</h2>
+                        <p>We can usually tell quickly whether your desired workflow is a good match for OpenClaw and which package makes sense.</p>
+                    </div>
+                    <div>
+                        <h3>Useful before booking</h3>
+                        <ul class="mini-list">
+                            <li>Write down the tasks you repeat every week</li>
+                            <li>Note the tools involved in that workflow</li>
+                            <li>Bring the machine you want the assistant to run on</li>
+                        </ul>
+                        <div class="hero-actions">
+                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Free Consult</a>
+                            <a class="button button-secondary" href="pricing-table.html">Review Pricing</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <strong>UrClaw</strong>
+                        <p>Based in New York. Available nationwide.</p>
+                    </div>
+                    <div>
+                        <strong>Pages</strong>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="pricing-table.html">Pricing</a></p>
+                    </div>
+                    <div>
+                        <strong>Booking</strong>
+                        <p><a href="https://cal.com/a-labs/urclaw-intro">Consult</a></p>
+                    </div>
+                    <div>
+                        <strong>Legal</strong>
+                        <p><a href="terms.html">Terms</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
-    <!-- What Can It Actually Do -->
-    <section class="content-section">
-        <div class="container">
-            <h2>What Can Your AI Actually Do?</h2>
-            <p>Once it's set up, your AI assistant can help with almost anything you do on your computer:</p>
-            
-            <div class="examples-grid">
-                <div class="example-card">
-                    <div class="example-icon">📧</div>
-                    <h4>Email Help</h4>
-                    <p>Summarize your inbox, draft replies, flag important emails</p>
-                </div>
-                <div class="example-card">
-                    <div class="example-icon">📅</div>
-                    <h4>Calendar Help</h4>
-                    <p>Schedule meetings, send reminders, organize your day</p>
-                </div>
-                <div class="example-card">
-                    <div class="example-icon">🔍</div>
-                    <h4>Research Help</h4>
-                    <p>Search online, find answers, summarize articles</p>
-                </div>
-                <div class="example-card">
-                    <div class="example-icon">💻</div>
-                    <h4>Coding Help</h4>
-                    <p>Write code, fix errors, organize projects</p>
-                </div>
-                <div class="example-card">
-                    <div class="example-icon">📊</div>
-                    <h4>Data Help</h4>
-                    <p>Work with spreadsheets, make reports, create charts</p>
-                </div>
-                <div class="example-card">
-                    <div class="example-icon">💬</div>
-                    <h4>Messaging Help</h4>
-                    <p>Send Slack/Discord/Telegram messages for you</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Is Setup Hard -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Why Is Setting It Up Hard?</h2>
-            <p>For something this useful to work, a few pieces need to connect:</p>
-            <ul>
-                <li><strong>AI access</strong> — You need an AI service (like from OpenAI or Google)</li>
-                <li><strong>Connections</strong> — Each service (email, calendar, etc.) needs to be connected</li>
-                <li><strong>Safety settings</strong> — We decide what your AI can and can't do</li>
-                <li><strong>Software setup</strong> — Installing the right programs and files</li>
-                <li><strong>Extra features</strong> — Adding more abilities as you need them</li>
-            </ul>
-            <p>Each step has its own instructions, and if something doesn't work, the error messages can be confusing.</p>
-
-            <div class="highlight-box">
-                <h3>🎯 That's Where We Come In</h3>
-                <p>Instead of spending your weekend reading tech docs and debugging, book a session with us. We'll set everything up on a live video call while you watch, explain what each setting does, and make sure it's actually working before we hang up.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Is It Safe -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Is It Safe?</h2>
-            <p><strong>Yes — if set up correctly.</strong> OpenClaw runs on your computer — your data doesn't go to our servers or anyone else's.</p>
-            <p>But "set up correctly" is important. A bad setup could:</p>
-            <ul>
-                <li>Let your AI access things it shouldn't</li>
-                <li>Share your private information by accident</li>
-                <li>Run code that could cause problems</li>
-            </ul>
-            <p>This is why expert setup matters. We make sure your AI is safe, secure, and only does what you want.</p>
-        </div>
-    </section>
-
-    <!-- Who Is This For -->
-    <section class="content-section">
-        <div class="container">
-            <h2>Who Is This For?</h2>
-            <p>OpenClaw is great for:</p>
-            <ul>
-                <li><strong>Anyone who does computer work</strong> and wants help with emails, research, or organization</li>
-                <li><strong>People who want to save time</strong> on repetitive computer tasks</li>
-                <li><strong>Curious folks</strong> who want to try AI assistants safely</li>
-                <li><strong>Small teams</strong> looking to get more done without hiring</li>
-            </ul>
-            <p>It's <em>not</em> a simple app with a pretty button (yet). It's a powerful tool that needs setup. But once it's running, it can save you hours every week.</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2>Ready to Get Started? 🦞</h2>
-            <p>Skip the tech docs. Skip the debugging. Let an expert set everything up for you.</p>
-            <a href="index.html#book" class="btn btn-primary">Book Your Setup Session →</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>🦞 UrClaw · An OpenClaw project</p>
-            <p style="margin-top: 8px;"><a href="terms.html">Terms</a> · <a href="news.html">Updates</a> · <a href="mailto:info@urclaw.com">Contact</a> · <a href="index.html">Home</a></p>
-        </div>
-    </footer>
+    <script src="site.js"></script>
 </body>
 </html>
