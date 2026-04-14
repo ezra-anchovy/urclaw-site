@@ -3,416 +3,265 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | UrClaw</title>
-    <meta name="description" content="Simple, transparent pricing for your AI assistant setup. No subscriptions, no hidden fees.">
+    <title>UrClaw Pricing | Setup Packages and Care Plans</title>
+    <meta name="description" content="Compare UrClaw setup packages and managed care plans for OpenClaw support in NYC and beyond.">
+    <link rel="canonical" href="https://urclaw.com/pricing-table.html">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://urclaw.com/pricing-table.html">
+    <meta property="og:title" content="UrClaw Pricing | Setup Packages and Care Plans">
+    <meta property="og:description" content="Essentials, Pro, Premium, Care, and Care+ options for UrClaw.">
+    <meta property="og:image" content="https://urclaw.com/social-card.svg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="UrClaw Pricing">
+    <meta property="twitter:description" content="Compare one-time setup packages and ongoing managed care plans.">
+    <meta property="twitter:image" content="https://urclaw.com/social-card.svg">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary: #18181b;
-            --accent: #a855f7;
-            --accent-glow: rgba(168, 85, 247, 0.3);
-            --text: #3f3f46;
-            --text-light: #71717a;
-            --bg: #fafafa;
-            --border: #e4e4e7;
-            --success: #22c55e;
-            --gradient: linear-gradient(135deg, #a855f7 0%, #ec4899 50%, #f97316 100%);
-            --gradient-subtle: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', -apple-system, sans-serif;
-            color: var(--text);
-            line-height: 1.7;
-            background: var(--bg);
-        }
-
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: var(--primary); }
-
-        .container { max-width: 1000px; margin: 0 auto; padding: 0 24px; }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(250, 250, 250, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 16px 0;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 24px;
-            list-style: none;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.9rem;
-        }
-
-        .nav-links a:hover { color: var(--accent); }
-
-        .nav-cta {
-            background: var(--gradient);
-            color: white !important;
-            padding: 10px 20px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 140px 0 60px;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: radial-gradient(ellipse at 50% 30%, var(--accent-glow) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 2.75rem);
-            font-weight: 700;
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .gradient-text {
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Pricing */
-        .pricing {
-            padding: 40px 0 80px;
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .pricing-card {
-            background: white;
-            border-radius: 24px;
-            padding: 36px;
-            border: 2px solid var(--border);
-            text-align: center;
-            position: relative;
-        }
-
-        .pricing-card.featured {
-            border-color: var(--accent);
-            box-shadow: 0 20px 50px var(--accent-glow);
-        }
-
-        .featured-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--gradient);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 600;
-        }
-
-        .pricing-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 8px;
-        }
-
-        .pricing-card .tagline {
-            color: var(--text-light);
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-        }
-
-        .pricing-card .price {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.75rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 24px;
-        }
-
-        .pricing-features {
-            list-style: none;
-            text-align: left;
-            margin-bottom: 28px;
-        }
-
-        .pricing-features li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.95rem;
-        }
-
-        .pricing-features li::before {
-            content: "✓";
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: all 0.3s;
-            width: 100%;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--gradient);
-            color: white;
-            box-shadow: 0 8px 24px var(--accent-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 32px var(--accent-glow);
-        }
-
-        .btn-secondary {
-            background: var(--primary);
-            color: white;
-        }
-
-        /* Money-Back Guarantee */
-        .guarantee {
-            padding: 60px 0;
-            background: white;
-        }
-
-        .guarantee-box {
-            background: var(--gradient-subtle);
-            border: 1px solid rgba(168, 85, 247, 0.2);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .guarantee-box h2 {
-            font-size: 1.5rem;
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        .guarantee-box p {
-            font-size: 1.05rem;
-            color: var(--text);
-        }
-
-        /* CTA */
-        .cta {
-            padding: 80px 0;
-            background: var(--primary);
-            color: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 16px;
-        }
-
-        .cta p {
-            opacity: 0.8;
-            font-size: 1.1rem;
-            margin-bottom: 28px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            background: var(--primary);
-            border-top: 1px solid rgba(255,255,255,0.1);
-            text-align: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.85rem;
-        }
-
-        footer a {
-            color: rgba(255,255,255,0.5);
-            text-decoration: none;
-        }
-
-        footer a:hover { color: white; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hero h1 { font-size: 1.75rem; }
-            .pricing-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo"><img src="icons/twitter-claws.svg" alt="UrClaw" style="height: 32px; width: auto; margin-right: 4px;"> UrClaw</a>
-            <ul class="nav-links">
-                <li><a href="index.html#what">What Is This?</a></li>
-                <li><a href="index.html#how">How It Works</a></li>
-                <li><a href="news.html">Updates</a></li>
-                <li><a href="index.html#pricing">Pricing</a></li>
-                <li><a href="index.html#book" class="nav-cta">Book a Session</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="page-shell">
+        <header class="site-header">
+            <div class="container">
+                <a class="brand" href="index.html" aria-label="UrClaw home">
+                    <span class="brand-mark">UC</span>
+                    <span class="brand-copy">
+                        <strong>UrClaw</strong>
+                        <span>NYC AI Setup</span>
+                    </span>
+                </a>
+                <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="site-nav" aria-label="Primary" data-nav-menu data-open="false">
+                    <a href="index.html#capabilities">Capabilities</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="#setup-packages">Pricing</a>
+                    <a href="what-is-openclaw.html">What Is OpenClaw?</a>
+                    <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Free Consult</a>
+                </nav>
+            </div>
+        </header>
 
-    <!-- Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>Simple, <span class="gradient-text">Honest Pricing</span></h1>
-            <p>One session. Everything set up. No monthly fees. No hidden costs.</p>
-        </div>
-    </section>
+        <main>
+            <section class="page-hero">
+                <div class="container page-grid">
+                    <div>
+                        <div class="eyebrow">Pricing</div>
+                        <h1>Setup packages for launch. Care plans for everything after.</h1>
+                        <p style="margin-top: 1rem; color: var(--text-soft); max-width: 42rem;">The pricing structure is deliberately simple: a one-time setup ladder for implementation, then optional monthly care plans for support, updates, and further optimization. Every engagement is tailored to what you&rsquo;re actually running &mdash; no two setups are the same.</p>
+                    </div>
+                    <aside class="stat-stack">
+                        <div class="stat-card">
+                            <strong>Setup sessions</strong>
+                            <p>Best when you already know the workflow you want and need hands-on implementation.</p>
+                        </div>
+                        <div class="stat-card">
+                            <strong>Managed care</strong>
+                            <p>Best when OpenClaw becomes part of how you operate and you want ongoing help.</p>
+                        </div>
+                    </aside>
+                </div>
+            </section>
 
-    <!-- Pricing -->
-    <section class="pricing">
-        <div class="container">
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Quick Start</h3>
-                    <p class="tagline">Get up and running</p>
-                    <div class="price">$99</div>
-                    <ul class="pricing-features">
-                        <li>30-minute live session</li>
-                        <li>Basic AI assistant setup</li>
-                        <li>1-2 features configured</li>
-                        <li>Quick-start guide</li>
-                        <li>7 days email support</li>
-                    </ul>
-                    <a href="index.html#book" class="btn btn-secondary">Book Now</a>
+            <section class="section" id="setup-packages">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="eyebrow">One-Time Setup</div>
+                        <h2>Choose the implementation depth that fits the work</h2>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <article class="pricing-card">
+                            <span class="tier-descriptor">Analyst</span>
+                            <span class="pill">Essentials</span>
+                            <div class="price"><strong>$499</strong><span>one time</span></div>
+                            <div class="pricing-card-body">
+                                <p>A focused launch: one channel, a few key workflows, and a fast path to daily use.</p>
+                                <ul class="check-list">
+                                    <li>90-minute live setup session</li>
+                                    <li>1 messaging channel configured</li>
+                                    <li>Core assistant with 3 workflows</li>
+                                    <li>Quick-start guide</li>
+                                    <li>Post-install check-in included</li>
+                                </ul>
+                            </div>
+                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Book Essentials</a>
+                        </article>
+                        <article class="pricing-card featured">
+                            <span class="tier-descriptor">AI Assistant</span>
+                            <span class="pill">Most Popular</span>
+                            <h3>Pro</h3>
+                            <div class="price"><strong>$699</strong><span>one time</span></div>
+                            <div class="pricing-card-body">
+                                <p>The full digital employee. Multi-channel, at least 8 workflows tailored to your operations, and a recorded session you can rewatch.</p>
+                                <ul class="check-list">
+                                    <li>2-hour live setup session</li>
+                                    <li>Multi-channel setup (Telegram + 1 more)</li>
+                                    <li>8+ workflows configured to your operations</li>
+                                    <li>Recorded session to rewatch</li>
+                                    <li>Post-install stabilization included</li>
+                                </ul>
+                            </div>
+                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Pro</a>
+                        </article>
+                        <article class="pricing-card">
+                            <span class="tier-descriptor">Chief of Staff</span>
+                            <span class="pill">Premium</span>
+                            <div class="price"><strong><span class="price-from">from </span>$1,199</strong><span>one time</span></div>
+                            <div class="pricing-card-body">
+                                <p>A bespoke build designed around your operations. Every channel, custom automations, and an expansion plan for what comes next.</p>
+                                <ul class="check-list">
+                                    <li>3-hour deep dive session</li>
+                                    <li>All channels configured</li>
+                                    <li>Custom automations and advanced workflows</li>
+                                    <li>All core workflows configured</li>
+                                    <li>Ongoing expansion plan included</li>
+                                    <li>Extended stabilization included</li>
+                                </ul>
+                            </div>
+                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Book Premium</a>
+                        </article>
+                    </div>
+
                 </div>
-                <div class="pricing-card featured">
-                    <div class="featured-badge">🔥 Most Popular</div>
-                    <h3>Full Setup</h3>
-                    <p class="tagline">The complete experience</p>
-                    <div class="price">$249</div>
-                    <ul class="pricing-features">
-                        <li>90-minute live session</li>
-                        <li>Complete AI assistant setup</li>
-                        <li>All features you want</li>
-                        <li>Personalized walkthrough</li>
-                        <li>Recorded session to rewatch</li>
-                        <li>30 days email support</li>
-                    </ul>
-                    <a href="index.html#book" class="btn btn-primary">Book Now</a>
+            </section>
+
+            <section class="section" id="managed-care">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="eyebrow">Monthly Care</div>
+                        <h2>Recurring support when the assistant becomes part of operations</h2>
+                        <p>These plans keep the system healthy in the background and make upgrades easy when you want them, without turning your setup into an ongoing IT project. Ongoing support is tailored to what you&rsquo;re running. As your workflows evolve, so does the support.</p>
+                    </div>
+
+                    <div class="pricing-grid">
+                        <article class="pricing-card">
+                            <span class="pill">Care</span>
+                            <div class="price"><strong>$149</strong><span>/ month</span></div>
+                            <div class="pricing-card-body">
+                                <ul class="check-list">
+                                    <li>Troubleshooting and updates</li>
+                                    <li>Email support, 48hr response</li>
+                                    <li>Covers installed workflows only</li>
+                                    <li>Cancel anytime with 30 days notice</li>
+                                </ul>
+                            </div>
+                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Discuss Care</a>
+                        </article>
+                        <article class="pricing-card featured">
+                            <span class="pill">Care+</span>
+                            <div class="price"><strong>$249</strong><span>/ month</span></div>
+                            <div class="pricing-card-body">
+                                <ul class="check-list">
+                                    <li>Everything in Care</li>
+                                    <li>Reserved scoping call every 4 weeks</li>
+                                    <li>Priority queue for upgrades and iterations</li>
+                                    <li>New workflows quoted and implemented separately</li>
+                                </ul>
+                            </div>
+                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Discuss Plus</a>
+                        </article>
+                        <article class="pricing-card">
+                            <span class="pill">Block Retainer</span>
+                            <div class="price"><strong>$500</strong><span>per block</span></div>
+                            <div class="pricing-card-body">
+                                <ul class="check-list">
+                                    <li>4 hours of support, valid 6 months</li>
+                                    <li>Configuration, fixes, reviews, and routing updates</li>
+                                    <li>No recurring commitment</li>
+                                    <li>Additional hours at $150/hr if block exhausted</li>
+                                </ul>
+                            </div>
+                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Discuss Retainer</a>
+                        </article>
+                    </div>
                 </div>
-                <div class="pricing-card">
-                    <h3>VIP Setup</h3>
-                    <p class="tagline">White-glove service</p>
-                    <div class="price">$499</div>
-                    <ul class="pricing-features">
-                        <li>2-hour deep dive session</li>
-                        <li>Advanced automations</li>
-                        <li>Multiple AI workflows</li>
-                        <li>Personal training</li>
-                        <li>Priority support (60 days)</li>
-                        <li>Follow-up call included</li>
-                    </ul>
-                    <a href="index.html#book" class="btn btn-secondary">Book Now</a>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="section-header">
+                        <div class="eyebrow">Comparison</div>
+                        <h2>What changes as you move up</h2>
+                    </div>
+
+                    <div class="table-shell">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Plan</th>
+                                    <th>Best For</th>
+                                    <th>Highlights</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Essentials</strong> <span style="color: var(--text-tertiary); font-size: 0.85rem;">Analyst</span></td>
+                                    <td>One channel, fast launch</td>
+                                    <td class="feature-good">Core assistant with 3 workflows &mdash; $499</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Pro</strong> <span style="color: var(--text-tertiary); font-size: 0.85rem;">AI Assistant</span></td>
+                                    <td>Most individuals and small teams</td>
+                                    <td class="feature-good">Multi-channel, 8+ workflows configured &mdash; $699</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Premium</strong> <span style="color: var(--text-tertiary); font-size: 0.85rem;">Chief of Staff</span></td>
+                                    <td>Bespoke builds and complex operations</td>
+                                    <td class="feature-good">All channels, custom automations &mdash; from $1,199</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Care</strong></td>
+                                    <td>Ongoing stability and updates</td>
+                                    <td class="feature-good">Troubleshooting, updates, 48hr response &mdash; $149/mo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Care+</strong></td>
+                                    <td>Owners who want our time on retainer</td>
+                                    <td class="feature-good">Reserved scoping calls, priority queue &mdash; $249/mo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Block Retainer</strong></td>
+                                    <td>Occasional support without a subscription</td>
+                                    <td class="feature-good">4 hours, valid 6 months &mdash; $500/block</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div>
+                        <strong>UrClaw</strong>
+                        <p>NYC-based OpenClaw setup and managed care.</p>
+                    </div>
+                    <div>
+                        <strong>Navigate</strong>
+                        <p><a href="index.html">Home</a></p>
+                        <p><a href="what-is-openclaw.html">What Is OpenClaw?</a></p>
+                    </div>
+                    <div>
+                        <strong>Booking</strong>
+                        <p><a href="https://cal.com/a-labs/urclaw-intro">Free consult</a></p>
+                    </div>
+                    <div>
+                        <strong>Legal</strong>
+                        <p><a href="terms.html">Terms</a></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </footer>
+    </div>
 
-    <!-- Money-Back Guarantee -->
-    <section class="guarantee">
-        <div class="container">
-            <div class="guarantee-box">
-                <h2>🛡️ 100% Money-Back Guarantee</h2>
-                <p>If we can't get your AI assistant running during our session, you get a full refund. No questions asked. (We've never had to issue one.)</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta">
-        <div class="container">
-            <h2>Questions? Just Ask 🦞</h2>
-            <p>Not sure which package is right for you? Email us and we'll help you figure it out.</p>
-            <a href="mailto:info@urclaw.com" class="btn btn-primary">Get in Touch →</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>🦞 UrClaw · An OpenClaw project</p>
-            <p style="margin-top: 8px;"><a href="terms.html">Terms</a> · <a href="news.html">Updates</a> · <a href="mailto:info@urclaw.com">Contact</a> · <a href="index.html">Home</a></p>
-        </div>
-    </footer>
+    <script src="site.js"></script>
 </body>
 </html>
