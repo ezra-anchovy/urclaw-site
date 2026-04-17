@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- M3 Heavy Riser favicon — D1 Warm Bronze on Dark -->
   <rect width="64" height="64" rx="14" fill="#2D2926"/>
-  <g transform="translate(10, 4.25) scale(0.2667) translate(-120, -76)">
-    <!-- U left arm -->
-    <rect x="120" y="76" width="28" height="126" fill="#A8503A"/>
+  <g transform="translate(8, 4.25) scale(0.2667) translate(-105, -76)">
+    <!-- U left arm (extended 15px left to balance C arms) -->
+    <rect x="105" y="76" width="28" height="126" fill="#A8503A"/>
     <!-- Spine -->
     <rect x="181" y="116" width="28" height="168" fill="#A8503A"/>
     <!-- U curve -->
-    <path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#A8503A"/>
+    <path d="M 105 198 L 105 210 C 105 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#A8503A"/>
     <!-- C top arm -->
     <polygon points="205,116 269,116 285,140 205,140" fill="#A8503A"/>
     <!-- C bottom arm -->
