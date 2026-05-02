@@ -1,39 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrClaw | NYC AI Assistant Setup - Your Own AI Set Up and Running Today</title>
-    <meta name="description" content="We set up AI assistants that actually do things: phone calls, voice workflows, email management, and automations. NYC-based experts. One live session and you're ready.">
-    <link rel="canonical" href="https://urclaw.com/">
-    <meta name="robots" content="index,follow">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://urclaw.com/">
-    <meta property="og:title" content="UrClaw | NYC AI Assistant Setup">
-    <meta property="og:description" content="NYC's OpenClaw experts. We set up AI assistants that actually do things on your computer, then keep them running with managed care.">
-    <meta property="og:image" content="https://urclaw.com/social-card.svg">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="UrClaw | NYC AI Assistant Setup">
-    <meta property="twitter:description" content="Live AI assistant setup for New York teams and operators. Setup included. Managed care available.">
-    <meta property="twitter:image" content="https://urclaw.com/social-card.svg">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="site.css">
-    <script type="application/ld+json">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>UrClaw. AI operations, installed in NYC.</title>
+<meta name="description" content="NYC AI operations practice. Custom AI installed on your hardware, in person if you're in the city. Fixed quote in 2 business days. From $1,500.">
+<meta name="author" content="UrClaw, a practice of Anchovy Labs LLC">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#A8503A">
+<link rel="canonical" href="https://urclaw.com/">
+
+<!-- favicon + apple touch icon -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UrClaw">
+<meta property="og:url" content="https://urclaw.com/">
+<meta property="og:title" content="UrClaw. AI operations, installed in NYC.">
+<meta property="og:description" content="NYC AI operations practice. Custom AI installed on your hardware. Fixed quote in 2 business days. From $1,500.">
+<meta property="og:image" content="https://urclaw.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="UrClaw — Your AI. Installed. Running.">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://urclaw.com/">
+<meta name="twitter:title" content="UrClaw. AI operations, installed in NYC.">
+<meta name="twitter:description" content="NYC AI operations practice. Custom AI installed on your hardware. Fixed quote in 2 business days. From $1,500.">
+<meta name="twitter:image" content="https://urclaw.com/og-image.png">
+<meta name="twitter:image:alt" content="UrClaw — Your AI. Installed. Running.">
+
+<link rel="preconnect" href="https://cal.com">
+<link rel="stylesheet" href="./styles.css">
+
+<!-- structured data: ProfessionalService + FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
+      "@id": "https://urclaw.com/#practice",
       "name": "UrClaw",
-      "url": "https://urclaw.com",
-      "image": "https://urclaw.com/social-card.svg",
-      "description": "NYC-based OpenClaw setup and managed care for AI assistants that handle real workflows on your machine.",
+      "legalName": "Anchovy Labs LLC",
+      "description": "NYC operations practice that installs custom AI on client hardware. Workflow scoping, on-premise deployment, harness-agnostic implementation across OpenClaw, Claude Code, Hermes, and custom agents.",
+      "url": "https://urclaw.com/",
+      "image": "https://urclaw.com/og-image.png",
+      "logo": "https://urclaw.com/assets/mark-m3-bronze-400.png",
+      "priceRange": "$1,500 - $25,000+",
+      "telephone": "",
+      "email": "info@urclaw.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "New York",
@@ -41,510 +63,409 @@
         "addressCountry": "US"
       },
       "areaServed": [
-        "New York City",
-        "United States"
+        { "@type": "City", "name": "New York" },
+        { "@type": "Country", "name": "United States" }
       ],
-      "brand": {
-        "@type": "Brand",
-        "name": "UrClaw"
-      },
-      "makesOffer": [
+      "serviceType": [
+        "AI operations consulting",
+        "Custom AI agent installation",
+        "On-premise AI deployment",
+        "OpenClaw install service",
+        "Claude Code integration",
+        "AI workflow automation"
+      ],
+      "knowsAbout": [
+        "OpenClaw",
+        "Claude Code",
+        "Hermes",
+        "AI workflow automation",
+        "On-premise AI deployment",
+        "Custom AI agents",
+        "AI infrastructure for regulated industries"
+      ],
+      "slogan": "Your AI. Installed. Running.",
+      "foundingLocation": {
+        "@type": "Place",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "New York",
+          "addressRegion": "NY",
+          "addressCountry": "US"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://urclaw.com/#faq",
+      "mainEntity": [
         {
-          "@type": "Offer",
-          "name": "Essentials Setup",
-          "price": "499",
-          "priceCurrency": "USD",
-          "url": "https://urclaw.com/pricing-table.html"
+          "@type": "Question",
+          "name": "Who owns the data and the code, and what happens if you disappear?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You do, and nothing changes. Configs, skills, data, all of it on your hardware or in accounts you control. Nothing lives on our servers. We document the system at install so any competent engineer can pick it up."
+          }
         },
         {
-          "@type": "Offer",
-          "name": "Pro Setup",
-          "price": "699",
-          "priceCurrency": "USD",
-          "url": "https://urclaw.com/pricing-table.html"
+          "@type": "Question",
+          "name": "Is this an OpenClaw install service?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sometimes. We also ship on Claude Code, Hermes, and custom agents. We pick what fits your workflow, your compliance posture, and your team."
+          }
         },
         {
-          "@type": "Offer",
-          "name": "Premium Setup",
-          "price": "1199",
-          "priceCurrency": "USD",
-          "url": "https://urclaw.com/pricing-table.html"
+          "@type": "Question",
+          "name": "What's the actual risk of sensitive data leaving our systems?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For high-risk cases we deploy locally with zero cloud calls. Otherwise we document exactly which providers see which data so you can audit it."
+          }
         },
         {
-          "@type": "Offer",
-          "name": "Care",
-          "price": "149",
-          "priceCurrency": "USD",
-          "url": "https://urclaw.com/pricing-table.html#managed-care"
-        },
-        {
-          "@type": "Offer",
-          "name": "Care Plus",
-          "price": "249",
-          "priceCurrency": "USD",
-          "url": "https://urclaw.com/pricing-table.html#managed-care"
+          "@type": "Question",
+          "name": "What about runaway API bills, or losing my work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Token caps are set at install. Model spend gets monitored, and broken changes get rolled back. Configs are backed up locally and in your accounts so a Mac Mini wipe doesn't take the system with it."
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
 </head>
 <body>
-    <div class="page-shell">
-        <div class="urgency-bar">
-            <div class="container">
-                <span>Booking availability is open for NYC setup sessions this week.</span>
-                <a href="https://cal.com/a-labs/urclaw-intro">Book a free consult</a>
-            </div>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="wrap top-bar" role="banner">
+  <a class="mark" href="/" aria-label="UrClaw home">
+    <img src="/assets/mark-m3-bronze-128.png" alt="" width="44" height="44">
+    <span class="brand">UrClaw</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="mailto:info@urclaw.com">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+
+  <section class="hero-area wrap" style="padding: 96px 0 120px;">
+    <img class="hero-watermark" src="/assets/mark-m3-bronze-400.png" alt="" aria-hidden="true">
+    <div class="hero-grid">
+      <div class="hero-text">
+        <div class="press-credit">
+          <span class="square" aria-hidden="true"></span>
+          <span class="prefix">Featured in</span>
+          <span class="pub">New York Magazine</span>
+          <span class="year">· 2026</span>
         </div>
-
-        <header class="site-header">
-            <div class="container">
-                <a class="brand" href="index.html" aria-label="UrClaw home">
-                    <span class="brand-mark"><svg xmlns="http://www.w3.org/2000/svg" viewBox="115 71 175 218" width="22" height="28" aria-hidden="true"><rect x="120" y="76" width="28" height="126" fill="#fff8f1"/><rect x="181" y="116" width="28" height="168" fill="#fff8f1"/><path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#fff8f1"/><polygon points="205,116 269,116 285,140 205,140" fill="#fff8f1"/><polygon points="205,260 285,260 269,284 205,284" fill="#fff8f1"/></svg></span>
-                    <span class="brand-copy">
-                        <strong>UrClaw</strong>
-                        <span>NYC AI Setup</span>
-                    </span>
-                </a>
-
-                <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation" data-nav-toggle>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <nav class="site-nav" aria-label="Primary" data-nav-menu data-open="false">
-                    <a href="#capabilities">Capabilities</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#pricing">Pricing</a>
-                    <a href="#faq">FAQ</a>
-                    <a class="button button-secondary" href="what-is-openclaw.html">What Is OpenClaw?</a>
-                    <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Free Consult</a>
-                </nav>
-            </div>
-        </header>
-
-        <main>
-            <section class="hero">
-                <div class="container hero-grid">
-                    <div class="hero-copy">
-                        <div class="eyebrow">UrClaw / New York City</div>
-                        <h1>You&rsquo;re on the L&nbsp;train.<br>Your AI is clearing your&nbsp;inbox.</h1>
-                        <p>While you&rsquo;re in transit, your assistant is drafting replies, rescheduling meetings, and researching that thing you forgot about. By the time you walk into the office, six tasks are done. It&rsquo;s like leaving a second you at home&thinsp;&mdash;&thinsp;one that never stops working.</p>
-                        <p class="hero-sub">We set up AI assistants on your own machine. One live session with a real engineer, and you have a personal AI you reach by text, voice, or Slack&thinsp;&mdash;&thinsp;from anywhere in the city.</p>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Free Consult</a>
-                            <a class="button button-secondary" href="#pricing">See Packages</a>
-                        </div>
-                        <div class="hero-meta">
-                            <span>Leave 10 minutes later every morning</span>
-                            <span>Your data stays on your machine</span>
-                            <span>Based in NYC, available nationwide</span>
-                        </div>
-                    </div>
-
-                    <aside class="hero-card" aria-label="UrClaw trust summary">
-                        <div class="eyebrow">What You Get</div>
-                        <h2>Build it live. Leave with it working.</h2>
-                        <p>UrClaw is for people who want OpenClaw installed on their own machine, tuned to their workflow, and supported when it needs updates.</p>
-                        <ul class="signal-list">
-                            <li>
-                                <span class="icon-badge">1</span>
-                                <div>
-                                    <strong>Live setup session</strong>
-                                    <p>We configure the tools with you on video so you see exactly what is running.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="icon-badge">2</span>
-                                <div>
-                                    <strong>Real workflow design</strong>
-                                    <p>Email triage, voice tasks, scheduling, research, and file handling configured around your needs.</p>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="icon-badge">3</span>
-                                <div>
-                                    <strong>Managed care options</strong>
-                                    <p>Ongoing troubleshooting, migrations, and optimization when you want recurring support.</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </aside>
-                </div>
-            </section>
-
-            <section class="section section-tight">
-                <div class="container trust-strip">
-                    <div class="trust-strip-header">
-                        <div>
-                            <div class="eyebrow">Built for New York City</div>
-                            <h2>Always-on AI. Even on the subway.</h2>
-                            <p>Your AI assistant runs on your machine 24/7. While you&rsquo;re commuting, at dinner, or in a meeting &mdash; it&rsquo;s handling emails, bookings, research, and reminders. Connect from your phone via iMessage, Telegram, Slack, or voice.</p>
-                        </div>
-                    </div>
-                    <div class="badge-row" aria-label="Trust badges">
-                        <div class="badge">
-                            <strong>NYC-based delivery</strong>
-                            <span>Set up on your machine, not the cloud.</span>
-                        </div>
-                        <div class="badge">
-                            <strong>Connect from anywhere</strong>
-                            <span>Your phone becomes the remote.</span>
-                        </div>
-                        <div class="badge">
-                            <strong>Clear support path after launch</strong>
-                            <span>We don&rsquo;t disappear.</span>
-                        </div>
-                    </div>
-                    <p class="trust-note">References available upon request.</p>
-                </div>
-            </section>
-
-            <section class="section" id="capabilities">
-                <div class="container">
-                    <div class="section-header">
-                        <div class="eyebrow">Capabilities</div>
-                        <h2>Workflows people actually ask for</h2>
-                        <p>We focus on practical OpenClaw setups that reduce admin load, speed up follow-through, and keep personal or business operations moving.</p>
-                    </div>
-
-                    <div class="capability-grid">
-                        <article class="card"><h3>Phone Calling</h3><p>Outbound call flows, follow-ups, and voice-led task handling.</p></article>
-                        <article class="card"><h3>Voice Workflows</h3><p>Voice cloning support and natural spoken interactions where appropriate.</p></article>
-                        <article class="card"><h3>Email Management</h3><p>Inbox triage, draft generation, and routine responses.</p></article>
-                        <article class="card"><h3>Scheduling</h3><p>Calendar coordination, appointment booking, and reminder coverage.</p></article>
-                        <article class="card"><h3>Research</h3><p>Fast information gathering, summaries, and recurring digests.</p></article>
-                        <article class="card"><h3>Document Drafting</h3><p>Letters, reports, follow-up notes, and internal docs.</p></article>
-                        <article class="card"><h3>Web Tasks</h3><p>Form filling, navigation, reservation requests, and repetitive browser work.</p></article>
-                        <article class="card"><h3>File Handling</h3><p>Sorting, renaming, and workflow-specific document organization.</p></article>
-                        <article class="card"><h3>Travel Planning</h3><p>Flight, hotel, and itinerary support with fewer tabs and less retyping.</p></article>
-                        <article class="card"><h3>Billing Follow-through</h3><p>Bill reminders, payment tracking, and admin nudges.</p></article>
-                        <article class="card"><h3>Social Scheduling</h3><p>Draft, queue, and manage repeatable content tasks.</p></article>
-                        <article class="card"><h3>Custom Ops Flows</h3><p>Use-case specific workflows for agencies, law firms, finance teams, and solo operators.</p></article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="how-it-works">
-                <div class="container">
-                    <div class="section-header">
-                        <div class="eyebrow">How It Works</div>
-                        <h2>Three steps from interest to a working setup</h2>
-                        <p>The process is designed to be transparent. We configure everything live, explain the moving parts, and leave you with something you can actually use.</p>
-                    </div>
-
-                    <div class="steps-grid">
-                        <article class="step-card">
-                            <span class="step-number">1</span>
-                            <h3>Book a time</h3>
-                            <p>Pick a consult slot and tell us what computer you use, what work you want automated, and where the friction is today.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">2</span>
-                            <h3>We set it up live</h3>
-                            <p>On video, we handle the technical setup while you watch. Questions are encouraged. You see what is installed and how it behaves.</p>
-                        </article>
-                        <article class="step-card">
-                            <span class="step-number">3</span>
-                            <h3>You leave ready</h3>
-                            <p>By the end of the session, your assistant is running. We show you the controls, your next steps, and the support path if something changes later.</p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="team">
-                <div class="container">
-                    <div class="section-header">
-                        <div class="eyebrow">The Team</div>
-                        <h2>One human engineer. Four AI agents. Zero tickets.</h2>
-                        <p>We enjoy doing this. Watching someone&rsquo;s face when their computer starts doing things for them is still the best part of the job.</p>
-                    </div>
-
-                    <article class="team-card team-card-human">
-                        <div class="team-copy">
-                            <span class="pill team-pill">human</span>
-                            <h3>Parker</h3>
-                            <p class="team-role">Founder &amp; Lead Engineer</p>
-                            <p>PhD researcher turned AI builder. 10+ years bridging humans and machines, from academia to Fortune 100.<br>Gets genuinely excited about your setup session.</p>
-                        </div>
-                    </article>
-
-                    <div class="team-grid-ai">
-                        <article class="team-card">
-                            <div class="team-copy">
-                                <span class="pill team-pill">AI</span>
-                                <h3>Ezra</h3>
-                                <p class="team-role">Operations Lead</p>
-                                <p>Keeps systems running, optimizes workflows, monitors 24/7.</p>
-                            </div>
-                        </article>
-                        <article class="team-card">
-                            <div class="team-copy">
-                                <span class="pill team-pill">AI</span>
-                                <h3>Jane</h3>
-                                <p class="team-role">Quantitative Analyst</p>
-                                <p>Designs decision logic and smart automation rules.</p>
-                            </div>
-                        </article>
-                        <article class="team-card">
-                            <div class="team-copy">
-                                <span class="pill team-pill">AI</span>
-                                <h3>Cato</h3>
-                                <p class="team-role">Quality Assurance</p>
-                                <p>Reviews every setup for safety, accuracy, and reliability.</p>
-                            </div>
-                        </article>
-                        <article class="team-card">
-                            <div class="team-copy">
-                                <span class="pill team-pill">AI</span>
-                                <h3>Tim</h3>
-                                <p class="team-role">Product Engineer</p>
-                                <p>Builds custom integrations and manages app deployments.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="pricing">
-                <div class="container">
-                    <div class="section-header">
-                        <div class="eyebrow">Packages</div>
-                        <h2>Setup included. Care available.</h2>
-                        <p>One-time setup gets you launched. Managed care turns UrClaw into a recurring support relationship instead of a one-and-done install.</p>
-                        <p>Every setup is different. These tiers are starting points — your scope is built around your workflows, your tools, and your goals. We&rsquo;ll define it together.</p>
-                    </div>
-
-                    <div class="pricing-grid">
-                        <article class="pricing-card">
-                            <span class="tier-descriptor">Analyst</span>
-                            <h3>Essentials</h3>
-                            <div class="price"><strong>$499</strong><span>one time</span></div>
-                            <div class="pricing-card-body">
-                                <p>A focused launch: one channel, a few key workflows, and a fast path to daily use.</p>
-                                <ul class="check-list">
-                                    <li>90-minute live setup session</li>
-                                    <li>1 messaging channel configured</li>
-                                    <li>Core assistant with 3 workflows</li>
-                                    <li>Quick-start guide</li>
-                                    <li>Post-install check-in included</li>
-                                </ul>
-                            </div>
-                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Book Essentials</a>
-                        </article>
-
-                        <article class="pricing-card featured">
-                            <span class="tier-descriptor">AI Assistant</span>
-                            <div class="tier-header"><h3>Pro</h3><span class="pill">Most Popular</span></div>
-                            <div class="price"><strong>$699</strong><span>one time</span></div>
-                            <div class="pricing-card-body">
-                                <p>The full digital employee. Multi-channel, at least 8 workflows tailored to your operations, and a recorded session you can rewatch.</p>
-                                <ul class="check-list">
-                                    <li>2-hour live setup session</li>
-                                    <li>Multi-channel setup (Telegram + 1 more)</li>
-                                    <li>8+ workflows configured to your operations</li>
-                                    <li>Recorded session to rewatch</li>
-                                    <li>Post-install stabilization included</li>
-                                </ul>
-                            </div>
-                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Pro</a>
-                        </article>
-
-                        <article class="pricing-card">
-                            <span class="tier-descriptor">Chief of Staff</span>
-                            <h3>Premium</h3>
-                            <div class="price"><strong><span class="price-from">from </span>$1,199</strong><span>one time</span></div>
-                            <div class="pricing-card-body">
-                                <p>A bespoke build designed around your operations. Every channel, custom automations, and an expansion plan for what comes next.</p>
-                                <ul class="check-list">
-                                    <li>3-hour deep dive session</li>
-                                    <li>All channels configured</li>
-                                    <li>Custom automations and advanced workflows</li>
-                                    <li>All core workflows configured</li>
-                                    <li>Ongoing expansion plan included</li>
-                                    <li>Extended stabilization included</li>
-                                </ul>
-                            </div>
-                            <a class="button button-secondary" href="https://cal.com/a-labs/urclaw-intro">Book Premium</a>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="managed-care">
-                <div class="container care-wrap">
-                    <div class="care-header">
-                        <div>
-                            <div class="eyebrow">Care Plans</div>
-                            <h2>Keep it running, keep it growing</h2>
-                            <p>OpenClaw changes. Operating systems change. Your workflows change. Care plans keep your setup healthy in the background and give you a clean path for upgrades when you want them. Ongoing support is tailored to what you&rsquo;re running. As your workflows evolve, so does the support.</p>
-                        </div>
-                        <a class="button button-primary" href="pricing-table.html#managed-care">Compare plans</a>
-                    </div>
-
-                    <div class="care-grid">
-                        <article class="care-card">
-                            <span class="pill">Care</span>
-                            <div class="price"><strong>$149</strong><span>/ month</span></div>
-                            <div class="pricing-card-body">
-                                <ul class="check-list">
-                                    <li>Troubleshooting and updates</li>
-                                    <li>Email support, 48hr response</li>
-                                    <li>Cancel anytime with 30 days notice</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="care-card">
-                            <span class="pill">Care+</span>
-                            <div class="price"><strong>$249</strong><span>/ month</span></div>
-                            <div class="pricing-card-body">
-                                <ul class="check-list">
-                                    <li>Everything in Care</li>
-                                    <li>Reserved scoping call every 4 weeks</li>
-                                    <li>Priority queue for upgrades</li>
-                                </ul>
-                            </div>
-                        </article>
-                        <article class="care-card">
-                            <span class="pill">Block Retainer</span>
-                            <div class="price"><strong>$500</strong><span>per block</span></div>
-                            <div class="pricing-card-body">
-                                <ul class="check-list">
-                                    <li>4 hours of support, valid 6 months</li>
-                                    <li>No recurring commitment</li>
-                                    <li>Configuration, fixes, and reviews</li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section" id="faq">
-                <div class="container">
-                    <div class="section-header">
-                        <div class="eyebrow">FAQ</div>
-                        <h2>Questions we expect from careful buyers</h2>
-                        <p>We would rather be direct than overpromise. These answers are written to set the right expectations before anyone books.</p>
-                    </div>
-
-                    <div class="faq-grid">
-                        <article class="faq-item" data-open="true">
-                            <button class="faq-question" type="button" aria-expanded="true">
-                                <span>Do I need to be technical?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>No. You need a computer, a live call, and enough access to the tools you want automated. We handle the technical setup while you watch.</p>
-                            </div>
-                        </article>
-                        <article class="faq-item" data-open="false">
-                            <button class="faq-question" type="button" aria-expanded="false">
-                                <span>What happens if something breaks?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Every setup package includes email support for a defined window. Managed care adds ongoing troubleshooting, migrations, and optimization after that.</p>
-                            </div>
-                        </article>
-                        <article class="faq-item" data-open="false">
-                            <button class="faq-question" type="button" aria-expanded="false">
-                                <span>Is my data safe?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Your conversations, memories, and files stay on your hardware — nothing is stored on our servers. When the assistant uses a cloud model (like GPT-5 or Claude), your prompt goes to that provider's API, same as if you used ChatGPT directly. The difference: you control which providers get used, what data gets sent, and we can route sensitive tasks to local-only models that never leave your machine. During setup, we configure guardrails, API key security, and teach you what to send where. A well-configured local setup is meaningfully more private than any hosted AI service.</p>
-                            </div>
-                        </article>
-                        <article class="faq-item" data-open="false">
-                            <button class="faq-question" type="button" aria-expanded="false">
-                                <span>Can this fit my business?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Usually yes, if the work can be done through email, browser tasks, documents, scheduling, or repeatable operational steps. We scope that on the consult.</p>
-                            </div>
-                        </article>
-                        <article class="faq-item" data-open="false">
-                            <button class="faq-question" type="button" aria-expanded="false">
-                                <span>What if it does not work during the session?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>If we cannot get your assistant running during the session, we do not treat that as a successful setup. We will either resolve it or refund you.</p>
-                            </div>
-                        </article>
-                        <article class="faq-item" data-open="false">
-                            <button class="faq-question" type="button" aria-expanded="false">
-                                <span>Can I start small and upgrade later?</span>
-                                <span class="faq-toggle-icon">+</span>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes. Many people start with a single workflow, then add broader automation or a care plan once the first use case is working.</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="container cta-panel">
-                    <div>
-                        <div class="eyebrow">Ready To Start</div>
-                        <h2>Tell us what you want your assistant to do.</h2>
-                        <p>We will use the consult to scope the workflow, confirm technical fit, and recommend the right setup package or managed care plan.</p>
-                    </div>
-                    <div>
-                        <h3>What to bring to the call</h3>
-                        <ul class="mini-list">
-                            <li>Your computer type and operating system</li>
-                            <li>The two or three workflows you care about most</li>
-                            <li>Any tools, inboxes, or calendars we need to connect</li>
-                        </ul>
-                        <div class="hero-actions">
-                            <a class="button button-primary" href="https://cal.com/a-labs/urclaw-intro">Book Your Session</a>
-                            <a class="button button-secondary" href="pricing-table.html">See Full Pricing</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <div>
-                        <strong>UrClaw</strong>
-                        <p>NYC-based OpenClaw setup and managed care.</p>
-                        <p>Based in New York. Available nationwide.</p>
-                    </div>
-                    <div>
-                        <strong>Navigation</strong>
-                        <p><a href="#capabilities">What We Do</a></p>
-                        <p><a href="#how-it-works">How It Works</a></p>
-                        <p><a href="#pricing">Packages &amp; Pricing</a></p>
-                        <p><a href="#faq">FAQ</a></p>
-                    </div>
-                    <div>
-                        <strong>Resources</strong>
-                        <p><a href="what-is-openclaw.html">What is OpenClaw?</a></p>
-                        <p><a href="pricing-table.html">Pricing Table</a></p>
-                        <p><a href="terms.html">Terms of Service</a></p>
-                    </div>
-                    <div>
-                        <strong>Contact</strong>
-                        <p><a href="https://cal.com/a-labs/urclaw-intro">Book a consult</a></p>
-                        <p><a href="mailto:info@urclaw.com">info@urclaw.com</a></p>
-                        <p><a href="mailto:work@urclaw.com">Work with us →</a></p>
-                    </div>
-                </div>
-                <p class="legal">&copy; 2026 UrClaw (Anchovy Labs LLC). Authentic claims only.</p>
-            </div>
-        </footer>
+        <h1 class="display-xl">Your AI. <em>Installed.</em> Running.</h1>
+        <p class="sub-hero" style="margin-top: 36px; max-width: 58ch;">A New York operations practice. We install custom AI on your hardware, for the work that breaks first in your morning. In person if you're in the city.</p>
+        <p class="fear-line" style="margin-top: 18px;">For the ones who already tried, and watched it break.</p>
+        <div class="cta-row" style="margin-top: 44px;">
+          <a class="cta-primary" href="https://cal.com/a-labs/urclaw-intro">Book a discovery call →</a>
+          <a class="cta-secondary" href="mailto:info@urclaw.com?subject=Workflow%20diagram%20request">Send a workflow → diagram in 48h</a>
+        </div>
+        <p class="hero-sla"><strong>Fixed quote within 2 business days.</strong> No cost-plus billing.</p>
+      </div>
     </div>
+  </section>
 
-    <script src="site.js"></script>
+  <aside class="epigraph" aria-label="NYC vignette">
+    <blockquote>
+      You're on the L&nbsp;train. Your AI is <em>clearing your inbox.</em>
+    </blockquote>
+    <cite>UrClaw · New York City</cite>
+  </aside>
+
+  <section class="section-dark">
+    <div class="wrap">
+      <span class="section-num">i. The discipline</span>
+      <div class="manifesto-poster">
+        <p class="display-poster">A new discipline is emerging. <em>People who understand their own work</em> well enough to teach a machine about it.</p>
+      </div>
+      <div class="pattern-chain">
+        <div class="pattern-mark">
+          <span class="dot"></span>
+          <div class="word">Reliability</div>
+        </div>
+        <div class="pattern-mark">
+          <span class="dot"></span>
+          <div class="word">Time back</div>
+        </div>
+        <div class="pattern-mark">
+          <span class="dot"></span>
+          <div class="word">Knows your stack</div>
+        </div>
+        <div class="pattern-mark">
+          <span class="dot"></span>
+          <div class="word">Trust earned</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="section-num">ii. The buyers</span>
+      <h2><em>Same frustration.</em> Different context.</h2>
+      <div class="profile-cards">
+        <article class="profile-card">
+          <div class="sector">Online education</div>
+          <h3 class="role">The <em>Two-Language Practice.</em></h3>
+          <blockquote class="moment">It's been a game changer. But there are so many people like me locked out because they don't know what's possible.</blockquote>
+          <cite class="byline">Practice founder</cite>
+        </article>
+        <article class="profile-card">
+          <div class="sector">Asset management</div>
+          <h3 class="role">The <em>Concurrent Desk.</em></h3>
+          <blockquote class="moment">I spent three days trying to figure out handoffs. I stopped what I was doing, that's not my core business.</blockquote>
+          <cite class="byline">Principal</cite>
+        </article>
+        <article class="profile-card">
+          <div class="sector">Privileged-records firm</div>
+          <h3 class="role">The <em>On-Premise Practice.</em></h3>
+          <blockquote class="moment">I threw up my hands and said, there's someone else out there that knows how to make all this work reliably.</blockquote>
+          <cite class="byline">Chief Technology Officer</cite>
+        </article>
+        <article class="profile-card">
+          <div class="sector">Capital markets</div>
+          <h3 class="role">The <em>Single-Source Desk.</em></h3>
+          <blockquote class="moment">When I see something interesting I save it on each app that I see it on. It's everywhere. I need a single source.</blockquote>
+          <cite class="byline">Desk head</cite>
+        </article>
+        <article class="profile-card">
+          <div class="sector">Field operations</div>
+          <h3 class="role">The <em>Saturday Cycle.</em></h3>
+          <blockquote class="moment">All of a sudden I can join voter files with shape files automatically. I can practically run turnout models on these things.</blockquote>
+          <cite class="byline">Operations lead</cite>
+        </article>
+        <article class="profile-card">
+          <div class="sector">Local-first business</div>
+          <h3 class="role">The <em>Two-Storefront Counter.</em></h3>
+          <blockquote class="moment">This is going to change everything. I haven't had that feeling since the Apple iPhone.</blockquote>
+          <cite class="byline">Owner</cite>
+        </article>
+
+        <article class="profile-card profile-card-wide">
+          <div class="left-col">
+            <div class="sector">Brooklyn, NYC</div>
+            <h3 class="role">The <em>Night Owl.</em></h3>
+          </div>
+          <div class="right-col">
+            <blockquote class="moment">I bought this computer for OpenClaw. Sat here till 8 a.m. last night, only quit because it deleted everything. Woke up and I'm back here again.</blockquote>
+            <cite class="byline">Solo operator</cite>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section-dark">
+    <div class="wrap">
+      <span class="section-num">iii. How the install works</span>
+      <h2>Built with you.<br><em>On the timeline we set.</em></h2>
+      <div class="tier-durations">
+        <div class="tier-duration">
+          <span class="tier">Starter</span>
+          <span class="span">one week</span>
+        </div>
+        <div class="tier-duration">
+          <span class="tier">Operations</span>
+          <span class="span">two to four weeks</span>
+        </div>
+        <div class="tier-duration">
+          <span class="tier">Full</span>
+          <span class="span">four to eight weeks</span>
+        </div>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="marker">01</div>
+          <h3 class="step-name">Discovery</h3>
+          <p class="step-copy">Free call. You describe a workflow that's breaking. We name the likely tier on the call. Operations and Full include a use-case mapping session, NDA where needed.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="marker">02</div>
+          <h3 class="step-name">Scope</h3>
+          <p class="step-copy">Named scope. Named price. Named retainer. Quoted before we sign.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="marker">03</div>
+          <h3 class="step-name">Install <em class="loc">· in NYC, in person</em></h3>
+          <p class="step-copy">One engineer, building on your machines while your team watches. We come to you in the city. On video if you're elsewhere.</p>
+        </div>
+        <div class="timeline-step">
+          <div class="marker">04</div>
+          <h3 class="step-name">Stabilize</h3>
+          <p class="step-copy">The agent improves the longer it runs. We tune routes and write a one-page note every retainer month.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <span class="section-num">iv. What you keep</span>
+      <h2>Fire us on Monday.<br>The agent <em>still runs Tuesday.</em></h2>
+      <div class="keep-entries">
+        <div class="keep-entry">
+          <div class="body">
+            <div class="label">Data</div>
+            <h3 class="word"><span class="em-dark">Configs, skills, prompts.</span> All on your hardware.</h3>
+            <p class="copy">Nothing on our servers, nothing licensed back to you. We document the sources at install so any competent engineer can pick it up.</p>
+          </div>
+        </div>
+        <div class="keep-entry">
+          <div class="body">
+            <div class="label">Hardware</div>
+            <h3 class="word"><span class="em-dark">On-premise</span> where it has to be.</h3>
+            <p class="copy">When the workflow requires it, the agent runs locally with zero cloud calls. Otherwise we map exactly which providers see which data, in writing, before the install begins.</p>
+          </div>
+        </div>
+        <div class="keep-entry">
+          <div class="body">
+            <div class="label">Workflows</div>
+            <h3 class="word"><span class="em-dark">Translated,</span> not abstracted.</h3>
+            <p class="copy">The agent runs your specific work, with your specific rules, in the tools you already use. No platform tax. No "your workflow doesn't fit our product."</p>
+          </div>
+        </div>
+        <div class="keep-entry">
+          <div class="body">
+            <div class="label">Expertise</div>
+            <h3 class="word"><span class="em-dark">Encoded</span> in something you can read.</h3>
+            <p class="copy">By the end of install your team understands the system well enough to run it. Retainer is optional for Starter, expected for Operations, required for Full.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="dark-pricing" style="padding: 96px 0;">
+    <div class="wrap">
+      <span class="section-num">v. Pricing</span>
+      <h2>Priced for reliability,<br><em>not consumption.</em></h2>
+
+      <div class="sla-banner">
+        <span class="sla-tag">The SLA</span>
+        Fixed quote within <em>2 business days</em> after discovery. No cost-plus billing.
+      </div>
+
+      <div class="pricing-posters">
+        <div class="pricing-poster">
+          <div class="tier-rule"></div>
+          <h3 class="tier-name">Starter Install</h3>
+          <div class="price"><em>$</em>1,500</div>
+          <div class="price-unit">flat</div>
+          <ul class="scope-list">
+            <li>One workflow.</li>
+            <li>About a week.</li>
+            <li>Retainer optional.</li>
+          </ul>
+        </div>
+        <div class="pricing-poster">
+          <div class="tier-rule"></div>
+          <h3 class="tier-name">Operations Install</h3>
+          <div class="price">from <em>$</em>5K</div>
+          <div class="price-unit">scoped on the call</div>
+          <ul class="scope-list">
+            <li>Three to eight workflows.</li>
+            <li>Two to four weeks.</li>
+            <li>Retainer expected.</li>
+          </ul>
+        </div>
+        <div class="pricing-poster">
+          <div class="tier-rule"></div>
+          <h3 class="tier-name">Full Operations Build</h3>
+          <div class="price price-narrative">By <em>introduction.</em></div>
+          <div class="price-unit">private engagements</div>
+          <ul class="scope-list">
+            <li>Complete operations translation.</li>
+            <li>Private deployment options.</li>
+            <li>Compliance-aware setup.</li>
+            <li>Retainer required.</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pricing-postscript">In between tiers? We'll quote it on the discovery call. If we're not the right fit, we'll tell you on that call.</p>
+
+      <div class="why-not-cheaper">
+        <div class="label">What you don't get at $999</div>
+        <p class="copy">A <strong>token-cap</strong> on the AI bill before it runs away. A <strong>config backup</strong> when the Mac Mini wipes itself. A <strong>routing diagram</strong> for which providers see what data. <strong>Someone to call</strong> when something breaks at 8 a.m. Commodity installs leave the operator on their own at exactly the moments that matter.</p>
+        <p class="references-line">Named references available on request, under NDA.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <span class="section-num">vi. Questions before the call</span>
+      <h2>The first <em>four.</em></h2>
+      <div class="faq-magazine">
+        <div class="faq-mag-item">
+          <div class="qa">
+            <h3 class="q">Who <em>owns it</em>, and what happens if you disappear?</h3>
+            <p class="a">You do, and nothing changes. Configs, skills, data, all of it on your hardware or in accounts you control. Nothing lives on our servers. We document the system at install so any competent engineer can pick it up.</p>
+          </div>
+        </div>
+        <div class="faq-mag-item">
+          <div class="qa">
+            <h3 class="q">Is this an <em>OpenClaw</em> install service?</h3>
+            <p class="a">Sometimes. We also ship on Claude Code, Hermes, and custom agents. We pick what fits your workflow, your compliance posture, and your team.</p>
+          </div>
+        </div>
+        <div class="faq-mag-item">
+          <div class="qa">
+            <h3 class="q">What's the <em>actual risk</em> of sensitive data leaving our systems?</h3>
+            <p class="a">For high-risk cases we deploy locally with zero cloud calls. Otherwise we document exactly which providers see which data so you can audit it.</p>
+          </div>
+        </div>
+        <div class="faq-mag-item">
+          <div class="qa">
+            <h3 class="q">What about <em>runaway API bills</em>, or losing my work?</h3>
+            <p class="a">Token caps are set at install. Model spend gets monitored, and broken changes get rolled back. Configs are backed up locally and in your accounts so a Mac Mini wipe doesn't take the system with it.</p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="faq-sixth" aria-label="A different question" style="margin-top: 48px; max-width: 56ch;">
+        <div class="label">A different question</div>
+        <p class="copy">Send it. <a href="mailto:info@urclaw.com">info@urclaw.com</a>. Replies are written by a person.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="tertiary-band">
+    <div class="wrap">
+      <p>Not ready for a call? <a href="mailto:info@urclaw.com?subject=Workflow%20diagram%20request">Send a workflow that's breaking.</a> We send a diagram back in 48 hours.</p>
+    </div>
+  </section>
+
+</main>
+
+<section class="footer-cta-xl">
+  <div class="wrap">
+    <h2>You watch it get built.<br><em>You leave with it running.</em></h2>
+    <div class="cta-row">
+      <a class="cta-primary" href="https://cal.com/a-labs/urclaw-intro">Book a discovery call →</a>
+      <a class="cta-secondary" href="mailto:info@urclaw.com">info@urclaw.com</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="row">
+      <div>UrClaw · A practice of Anchovy Labs LLC · New York City · 2026</div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
