@@ -1,142 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - UrClaw</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0f0f0f;
-            color: #e0e0e0;
-            line-height: 1.7;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #333;
-        }
-        header a {
-            color: #f97316;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: 700;
-        }
-        h1 {
-            font-size: 36px;
-            margin: 20px 0;
-        }
-        .updated {
-            color: #888;
-            font-size: 14px;
-        }
-        h2 {
-            color: #f97316;
-            margin: 40px 0 16px;
-            font-size: 22px;
-        }
-        p, li {
-            margin-bottom: 16px;
-            color: #ccc;
-        }
-        ul {
-            padding-left: 24px;
-        }
-        a {
-            color: #f97316;
-        }
-        footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid #333;
-            text-align: center;
-            color: #666;
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Notice — UrClaw</title>
+<meta name="description" content="UrClaw privacy notice. What we collect, how we use it, your rights under GDPR and CCPA, named subprocessors, 72-hour breach notification.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#A8503A">
+<link rel="canonical" href="https://urclaw.com/privacy.html">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.legal-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 40px 120px;
+}
+.legal-page h1 {
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+.legal-page h1 em { font-style: italic; color: var(--bronze-dark); }
+.legal-page .effective {
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--bronze-earth);
+  margin-bottom: 48px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--bronze);
+}
+.legal-page h2 {
+  font-family: var(--serif);
+  font-weight: normal;
+  font-size: 26px;
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--dark-15);
+  margin-bottom: 14px;
+  letter-spacing: -0.005em;
+  color: var(--dark);
+}
+.legal-page p {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dark-85);
+  max-width: none;
+  margin-bottom: 18px;
+}
+.legal-page ul {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--dark-85);
+  margin: 18px 0 18px 22px;
+}
+.legal-page li { margin-bottom: 10px; padding-left: 4px; }
+.legal-page li::marker { color: var(--bronze); }
+.legal-page a {
+  color: var(--bronze-earth);
+  border-bottom: 1px solid var(--bronze-earth);
+  padding-bottom: 1px;
+}
+.legal-page a:hover { color: var(--bronze-dark); border-bottom-color: var(--bronze-dark); }
+.legal-page strong {
+  font-style: normal;
+  font-variant: small-caps;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+  color: var(--dark);
+}
+.legal-page table.kv {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 18px 0 24px;
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--dark-85);
+}
+.legal-page table.kv th,
+.legal-page table.kv td {
+  padding: 12px 14px 12px 0;
+  vertical-align: top;
+  border-bottom: 1px solid var(--dark-15);
+  text-align: left;
+}
+.legal-page table.kv th {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bronze-earth);
+  font-weight: normal;
+  white-space: nowrap;
+  width: 38%;
+}
+@media (max-width: 720px) {
+  .legal-page { padding: 56px 22px 96px; }
+  .legal-page ul { margin-left: 18px; }
+  .legal-page table.kv th { width: auto; white-space: normal; }
+  .legal-page table.kv th, .legal-page table.kv td { display: block; padding: 8px 0; border-bottom: none; }
+  .legal-page table.kv tr { display: block; padding: 12px 0; border-bottom: 1px solid var(--dark-15); }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <a href="/">🦞 UrClaw</a>
-            <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: February 8, 2026</p>
-        </header>
+<a class="skip-link" href="#main">Skip to content</a>
 
-        <p>UrClaw ("we," "our," or "us") respects your privacy. This Privacy Policy explains how we collect, use, and protect your personal information.</p>
+<header class="wrap top-bar" role="banner">
+  <a class="mark" href="/" aria-label="UrClaw home">
+    <img src="/assets/mark-m3-bronze-128.png" alt="" width="44" height="44">
+    <span class="brand">UrClaw</span>
+  </a>
+  <nav class="nav" aria-label="Primary">
+    <a href="/">Home</a>
+    <a href="/terms.html">Terms</a>
+    <a href="mailto:info@urclaw.com">Contact</a>
+  </nav>
+</header>
 
-        <h2>Information We Collect</h2>
-        <p><strong>Information you provide:</strong></p>
-        <ul>
-            <li>Contact information (name, email address, phone number)</li>
-            <li>Payment information (processed securely by Stripe; we don't store card details)</li>
-            <li>Service preferences and requirements</li>
-            <li>Communications you send us</li>
-        </ul>
-        <p><strong>Information collected automatically:</strong></p>
-        <ul>
-            <li>Device and browser information</li>
-            <li>IP address and general location</li>
-            <li>Website usage data</li>
-        </ul>
+<main id="main" class="legal-page">
+  <h1>Privacy <em>Notice.</em></h1>
+  <p class="effective">Effective May 2, 2026</p>
 
-        <h2>How We Use Your Information</h2>
-        <ul>
-            <li>To provide and improve our services</li>
-            <li>To communicate with you about your service</li>
-            <li>To process payments</li>
-            <li>To send service updates and support information</li>
-            <li>To comply with legal obligations</li>
-        </ul>
+  <p>UrClaw is a practice of Anchovy Labs LLC, operating from New York City. This notice explains what information we collect when you contact us, how we use it, who else processes it on our behalf, and the rights you have under the GDPR (if you are in the EU or UK) and the CCPA/CPRA (if you are a California resident). The controller is Anchovy Labs LLC, c/o <a href="mailto:info@urclaw.com">info@urclaw.com</a>.</p>
 
-        <h2>Information Sharing</h2>
-        <p>We do not sell your personal information. We may share information with:</p>
-        <ul>
-            <li><strong>Service providers:</strong> Payment processors (Stripe), hosting providers, and tools necessary to deliver our services</li>
-            <li><strong>Legal requirements:</strong> When required by law or to protect our rights</li>
-        </ul>
+  <h2>What we collect</h2>
+  <p>We collect only what you send us, and only what we need to respond. The categories below match the CCPA/CPRA categories of personal information.</p>
+  <table class="kv">
+    <tr><th>Identifiers</th><td>Name, email address, role, firm. Source: you, when you write to us or book a call.</td></tr>
+    <tr><th>Commercial information</th><td>Engagement memorandum, invoices, payment records. Source: you and our payment processor.</td></tr>
+    <tr><th>Communications content</th><td>Email correspondence, workflow descriptions you send for the 48-hour diagram, attachments. Source: you.</td></tr>
+    <tr><th>Calendar metadata</th><td>Booked discovery-call slot, time zone, any notes you add. Source: Cal.com on your booking.</td></tr>
+    <tr><th>Server logs</th><td>IP address, user agent, request path, retained by GitHub Pages and Cloudflare for serving and abuse prevention. Source: your browser. Not under our control.</td></tr>
+  </table>
+  <p>We do not collect sensitive personal information as defined by CPRA (no biometric, geolocation, financial account, health, or precise location data). We do not run analytics, advertising trackers, or session-recording tools on this site. We do not set first-party cookies. We do not sell or share personal information for cross-context behavioral advertising.</p>
 
-        <h2>AI Assistant Data</h2>
-        <p>When we configure AI assistants on your behalf, we may access information necessary for setup (such as calendar, email, or other integrated services). We:</p>
-        <ul>
-            <li>Only access what's necessary for configuration</li>
-            <li>Do not retain copies of your personal data from integrated services</li>
-            <li>Do not use your data to train AI models</li>
-            <li>Configure permissions as minimally as needed for functionality</li>
-        </ul>
+  <h2>Who else processes it</h2>
+  <p>We use a small set of subprocessors. We do not authorize them to use your information for their own purposes, and we will give 30 days' notice before adding a new one to engagements under DPA.</p>
+  <table class="kv">
+    <tr><th>Cal.com</th><td>Discovery-call scheduling. Their notice: cal.com/privacy.</td></tr>
+    <tr><th>Google Workspace</th><td>Email and document storage for info@urclaw.com correspondence.</td></tr>
+    <tr><th>GitHub Pages</th><td>Static hosting of urclaw.com. Receives request logs.</td></tr>
+    <tr><th>Cloudflare</th><td>DNS and edge caching. Receives request logs and may set storage incidental to serving.</td></tr>
+  </table>
 
-        <h2>Data Security</h2>
-        <p>We implement appropriate technical and organizational measures to protect your information. However, no method of transmission or storage is 100% secure.</p>
+  <h2>How we use it</h2>
+  <ul>
+    <li>Reply to your message.</li>
+    <li>Prepare and deliver work in your engagement memorandum.</li>
+    <li>Meet legal obligations (tax records, retention rules, audit requests).</li>
+  </ul>
+  <p>Lawful basis under GDPR: your <strong>consent</strong> when you write to us; <strong>performance of contract</strong> once an engagement memorandum is signed; <strong>legitimate interests</strong> for fraud prevention, security, and recordkeeping. We do not use your information for automated decision-making with legal or similarly significant effects.</p>
 
-        <h2>Your Rights</h2>
-        <p>You have the right to:</p>
-        <ul>
-            <li>Access your personal information</li>
-            <li>Correct inaccurate information</li>
-            <li>Request deletion of your information</li>
-            <li>Opt out of marketing communications</li>
-        </ul>
-        <p>To exercise these rights, contact us at <a href="mailto:info@urclaw.com">info@urclaw.com</a>.</p>
+  <h2>How long we keep it</h2>
+  <table class="kv">
+    <tr><th>Prospect correspondence</th><td>24 months from last contact, then deleted.</td></tr>
+    <tr><th>Active engagement records</th><td>Life of the engagement plus six years (NY contract limitations period under CPLR § 213).</td></tr>
+    <tr><th>Tax records</th><td>Seven years (IRS retention, 26 U.S.C. § 6501).</td></tr>
+    <tr><th>Server logs</th><td>Per the retention policy of GitHub Pages and Cloudflare, typically 30 to 90 days.</td></tr>
+  </table>
+  <p>You may ask us to delete material that is not subject to a legal hold or one of the retention rules above.</p>
 
-        <h2>Cookies</h2>
-        <p>We use essential cookies to operate our website. We do not use tracking cookies for advertising purposes.</p>
+  <h2>Your rights</h2>
+  <p>If you are in the EU, the UK, or California, you have the rights below. To exercise any of them, email <a href="mailto:info@urclaw.com">info@urclaw.com</a> with the subject line "privacy request." We respond within 30 days (extendable once by 60 days with notice). We may need to verify your identity using information you have already shared with us.</p>
+  <ul>
+    <li>Access: a copy of what we hold about you.</li>
+    <li>Rectification: correction of inaccurate or incomplete data.</li>
+    <li>Erasure: deletion of data we no longer need to keep.</li>
+    <li>Restriction: pause processing while a question is resolved.</li>
+    <li>Portability: a machine-readable export.</li>
+    <li>Objection: stop processing based on legitimate interests, including marketing.</li>
+    <li>Withdraw consent: at any time, without affecting prior lawful processing.</li>
+    <li>California residents: limit use of sensitive personal information (we collect none), opt out of sale or sharing (we do neither), and non-discrimination for exercising any right.</li>
+    <li>Lodge a complaint with a supervisory authority (EU/UK) or the California Privacy Protection Agency.</li>
+  </ul>
 
-        <h2>Changes</h2>
-        <p>We may update this Privacy Policy. We will notify you of material changes via email or website notice.</p>
+  <h2>Security</h2>
+  <p>Email is encrypted in transit between major providers. Our laptops use full-disk encryption and require multi-factor authentication on Google Workspace. We do not store credentials on the homepage. Engagement-specific security measures, including audit-trail format and access controls, are named in your engagement memorandum.</p>
 
-        <h2>Contact</h2>
-        <p>Questions about this Privacy Policy? Contact us at <a href="mailto:info@urclaw.com">info@urclaw.com</a>.</p>
+  <h2>Breach notification</h2>
+  <p>If we confirm a personal-data breach affecting you, we will notify you within 72 hours of confirmation, in line with GDPR Article 33. The notice will name what was affected, what we know about cause and scope, and what we are doing about it.</p>
 
-        <footer>
-            <p>&copy; 2026 UrClaw. All rights reserved.</p>
-            <p><a href="/">Home</a> · <a href="/terms.html">Terms of Service</a></p>
-        </footer>
+  <h2>On-premise installs</h2>
+  <p>For engagements that include on-premise deployment, we never receive a copy of the data the system processes. The agent runs on your hardware, in accounts you control. The data residency and retention rules of your installation apply to that data, not this notice.</p>
+
+  <h2>International transfers</h2>
+  <p>UrClaw operates from the United States. If you are in the EU or UK and write to us, your message crosses to a US recipient under your consent. Where we work with EU or UK personal data under an engagement memorandum, the parties execute Standard Contractual Clauses or, for UK transfers, the UK International Data Transfer Addendum, named in that memorandum.</p>
+
+  <h2>Children</h2>
+  <p>This site is not directed to anyone under 18, and we do not knowingly collect information from minors. If you believe we have collected data from someone under 13, email us and we will delete it.</p>
+
+  <h2>Changes to this notice</h2>
+  <p>We may update this notice. The effective date at the top reflects the latest version. If a change materially expands what we collect or how we use it, we will email anyone in active correspondence before that change takes effect.</p>
+
+  <h2>Contact</h2>
+  <p>UrClaw, a practice of Anchovy Labs LLC, New York City. Email: <a href="mailto:info@urclaw.com">info@urclaw.com</a>.</p>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="row">
+      <div>UrClaw · A practice of Anchovy Labs LLC · New York City · 2026</div>
+      <div><a href="/">Home</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a></div>
     </div>
+  </div>
+</footer>
 </body>
 </html>
