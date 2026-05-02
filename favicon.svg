@@ -1,10 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#2D2926"/>
-  <svg viewBox="115 71 175 218" x="5" y="4" width="54" height="56">
-    <rect x="120" y="76" width="28" height="126" fill="#A8503A"/>
-    <rect x="181" y="116" width="28" height="168" fill="#A8503A"/>
-    <path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z" fill="#A8503A"/>
-    <polygon points="205,116 269,116 285,140 205,140" fill="#A8503A"/>
-    <polygon points="205,260 285,260 269,284 205,284" fill="#A8503A"/>
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="92 70 222 222">
+  <style>
+    .mark { fill: #A8503A; }
+    @media (prefers-color-scheme: dark) { .mark { fill: #D78866; } }
+  </style>
+  <g class="mark">
+    <rect x="120" y="76" width="28" height="126"/>
+    <rect x="181" y="116" width="28" height="168"/>
+    <path d="M 120 198 L 120 210 C 120 280 209 280 209 210 L 209 198 L 181 198 C 181 256 148 256 148 198 Z"/>
+    <polygon points="205,116 269,116 285,140 205,140"/>
+    <polygon points="205,260 285,260 269,284 205,284"/>
+  </g>
 </svg>
